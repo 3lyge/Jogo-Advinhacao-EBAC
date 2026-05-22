@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo da Adivinhação</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -13,8 +13,11 @@
     <label for="palpite">Seu palpite</label>
     <input type="number" id="palpite" min="1" max="100" placeholder="50">
     <p>
-        <button onclick="Advinhar()">Adivinhar</button>
+        <button onclick="adivinhar()">Chutar</button>
     </p>
+    <p id="resultado"></p>
+    <button id="btnReiniciar" style="display:none" onclick="location.reload()">Jogar novamente</button>
+    <p id="tentativas">Tentativas restantes: 15</p>
     
 
     

@@ -1,6 +1,6 @@
 const numeroSecreto = Math.floor(Math.random() * 100) + 1;
 let tentativas = 0;
-const limite = 15;
+const limite = 10;
 
 function encerrarJogo(mensagem) {
   document.getElementById("resultado").textContent = mensagem;
@@ -26,13 +26,13 @@ let palpite = parseInt(document.getElementById("palpite").value);
 
     //Caso acerte
     if (palpite == numeroSecreto) {
-        document.getElementById("resultado").textContent = "Parabéns! Você acertou!";
+        encerrarJogo ("Parabéns! Você acertou!");
         return; //interrompe a função, não precisa checar mais nada
     }
 
     //Caso acabem as tentativas
     if (tentativas >= limite) {
-        document.getElementById("resultado").textContent = "Game Over! O número era " + numeroSecreto;
+        encerrarJogo ("Game Over! O número era " + numeroSecreto);
         return; //interrompe a função, não precisa checar mais nada
     }
 
@@ -45,9 +45,4 @@ let palpite = parseInt(document.getElementById("palpite").value);
 
     //Exibir contador
     document.getElementById("tentativas").textContent = "Tentativas restantes: " + tentativasRest;
-}
-
-function encerrarJogo(mensagem) {
-  document.getElementById("resultado").textContent = mensagem;
-  document.getElementById("btnReiniciar").style.display = "block"
 }

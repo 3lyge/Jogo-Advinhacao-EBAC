@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Adivinhação</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Person.css">
 
 </head>
 <body>
+    <div class="jogo">
     <h1>Jogo de Adivinhação</h1>
-    <p>Digite um número de 1 a 100</p>
-    <label for="palpite">Seu palpite</label>
-    <input type="number" id="palpite" min="1" max="100" placeholder="50">
-    <p>
-        <button onclick="adivinhar()">Chutar</button>
-    </p>
+    <p class="regras">Eu penso em um número, você advinha ele, bora?</p>
+    <p class="regras">As regras são simples:</p>
+    <p class="regras">Você chuta um número inteiro de 0 a 100 e eu te digo</p> 
+    <p class="regras"> se é maior, menor ou se por algum milagre vc acertou.</p>
+    <h2>Bora?</h2>
+    <p class="aaa">Digite um número de 1 a 100.</p>
+    <input type="number" id="palpite" min="1" max="100" placeholder="  50">
+        <button class="chute" onclick="adivinhar()">Chutar</button>
     <p id="resultado"></p>
-    <button id="btnReiniciar" style="display:none" onclick="location.reload()">Jogar novamente</button>
-    <p id="tentativas">Tentativas restantes: 10</p>
-    
+    <p id="tentativas" class="Tentativas">Tentativas restantes: 10</p>
+    <p><button class="reTry" id="btnReiniciar" style="display:none" onclick="location.reload()">Jogar novamente</button></p>
+    </div>
 
 <script src="script.js"></script>    
 </body>
